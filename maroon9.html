@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maroon 9 Website Redesign | Celeste Vazquez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="container">
+        <a href="index.html" class="logo">
+            <h1>Celeste Vazquez</h1>
+            <p>UX Designer</p>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="projects.html">Projects <span class="arrow">›</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="maroon9.html">Maroon 9 Website Redesign</a></li>
+                    <li><a href="beanstack.html">Beanstack Training Video</a></li>
+                    <li><a href="conchas.html">Cowboy Conchas Website</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- ═══════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════ -->
+    <section class="case-hero">
+        <div class="container case-container">
+
+            <p class="eyebrow">UX Case Study · Nonprofit Web Design</p>
+            <h1>Maroon 9 Website Redesign</h1>
+            <p class="case-intro">
+                Led the redesign of a nonprofit website that helps families discover programs, understand impact, and get involved in their community.
+            </p>
+
+            <img class="case-hero-img" src="assets/maroon9card.png" alt="Final Maroon 9 homepage redesign showing the new navigation, hero section, and program cards">
+            <p class="image-caption">Final homepage redesign — built from scratch in HTML, CSS, and JavaScript. Spring 2026.</p>
+
+            <div class="project-meta">
+                <div>
+                    <h3>My Role</h3>
+                    <p>Project Lead · UX Designer · Front-End Developer</p>
+                </div>
+                <div>
+                    <h3>Timeline</h3>
+                    <p>Spring 2026</p>
+                </div>
+                <div>
+                    <h3>Team</h3>
+                    <p>5-person interdisciplinary team</p>
+                </div>
+                <div>
+                    <h3>Tools</h3>
+                    <p>Figma, HTML, CSS, JavaScript, PHP, SQL</p>
+                </div>
+            </div>
+
+            <div style="margin-top:2rem;">
+                <a href="YOUR_LIVE_URL_HERE" target="_blank" class="button">Explore the Redesign →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         OVERVIEW
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Overview</h2>
+            <p>
+                Maroon 9 Community Enrichment Organization is a Fort Worth nonprofit that provides youth development, theatre arts education, and sickle cell advocacy programs.
+            </p>
+            
+            <p>
+The existing website made it difficult for users to discover programs, understand the organization's impact, and find clear next steps for getting involved.
+            </p>
+
+           <p>As Project Lead on a five-person interdisciplinary team, I led the redesign from research through implementation. My responsibilities included stakeholder interviews, surveys, information architecture, wireframing, navigation design, usability testing, and front-end development.   
+             </p> 
+            <p>
+I led the design and development of the homepage, navigation system, Programs section, and three program subpages, focusing on improving program discovery, comparison, and user engagement.
+</p>
+            <div class="callout" style="margin-top:2rem;">
+                <h3>The Design Challenge</h3>
+                <p>How might we redesign Maroon 9's website so that parents, youth, donors, and community members can quickly discover programs, understand the organization's mission, and take meaningful action regardless of device or digital literacy?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         THE PROBLEM
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>The Problem</h2>
+
+            <p>
+                The original website had not kept pace with the organization's growth. Most content was concentrated on a single homepage, making it difficult for users to quickly find relevant information.
+            </p>
+
+            <p>Navigation reflected internal organizational terminology rather than user goals, 
+                while key actions such as enrolling, donating, 
+                and volunteering were difficult to find or led users away from the website entirely.</p>
+
+            <h3>Original Website</h3>
+
+            <div class="image-grid two-column">
+                <div>
+                    <img src="assets/og-maroon9home.png" alt="Original Maroon 9 website — dense homepage with no clear hierarchy or program navigation">
+                    <p class="image-caption">Homepage concentrated nearly all content in one place with no clear hierarchy.</p>
+                </div>
+                <div>
+                    <img src="assets/og-maroonhome2.png" alt="Original Maroon 9 website — About Maroon 9 section with dense text and no scannable structure">
+                    <p class="image-caption">Dense text blocks with no scannable structure made it hard to find key information quickly.</p>
+                </div>
+            </div>
+
+            <h3>Original Site Architecture</h3>
+
+            <img src="assets/og-maroon9-sitemap.png" alt="Original Maroon 9 sitemap showing flat structure with KAWP and Donate linking to external sites">
+            <p class="image-caption">Everything lived under one flat homepage. KAWP linked to an external site; Donate linked to PayPal. No internal program pages existed.</p>
+
+            <p>
+                Stakeholder interviews, surveys, and an audit of the existing website revealed four recurring 
+                usability issues that affected nearly every visitor journey.
+            </p>
+
+            <div class="problem-grid">
+                <div class="info-card">
+                    <h3>No Program Clarity</h3>
+                    <p>Programs had no dedicated pages. Parents couldn't compare options or understand what their child would actually do.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Navigation Gaps</h3>
+                    <p>Navigation and content organization did not align with common user goals, making important information harder to find.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Hidden Key Actions</h3>
+                    <p>Donate and volunteer CTAs were either buried, broken, 
+                        or sent users to external platforms, creating drop-off at the most critical moments.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Content Overload</h3>
+                    <p>Important information was spread across long, text-heavy pages, making it difficult to quickly scan and find relevant information.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         MY CONTRIBUTIONS
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section highlight-section">
+        <div class="container case-container">
+            <h2>My Contributions</h2>
+            <p>
+As Project Lead, I contributed across research, information architecture, UX design, and front-end development. These were the areas I personally owned.            </p>
+            <div class="card-grid">
+                <div class="info-card">
+                    <h3>Project Leadership</h3>
+                    <p>Led a five-person interdisciplinary team through research, design, and development. Coordinated client communication, organized team deliverables, and helped guide decisions throughout the project.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Information Architecture</h3>
+                    <p>Created the sitemap and reorganized content around user goals rather than organizational structure. Developed a clearer navigation system to help users find programs, events, impact information, and ways to get involved.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Programs Experience</h3>
+                    <p>Built the Programs overview page and all three program detail pages (KAWP, Page to Stage, Sickle Cell Stars) from scratch — layout, content hierarchy, and CTAs for each.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Interaction Engineering</h3>
+                    <p>Designed the Programs page and all three program detail pages (KAWP, Page to Stage, and Sickle Cell Stars). Created comparison-focused layouts, content hierarchy, and clear calls-to-action to help users evaluate programs and take the next step.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         RESEARCH & DISCOVERY
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Research & Discovery</h2>
+
+            <p>
+                Before designing anything, we needed to understand the real problems, not just the visible ones.
+                We conducted stakeholder interviews, a communication brief survey, a content audit, and a competitive analysis of comparable organizations.
+            </p>
+
+            <img src="assets/stakeholder-survey-results.png" alt="Stakeholder survey and communication brief responses from Maroon 9 leadership">
+            <p class="image-caption">The communication brief survey gave us direct access to organizational priorities, audience needs, and content gaps — straight from the client.</p>
+
+            <h3>What the Research Told Us</h3>
+
+            <div class="insight-list">
+                <p><strong>Parents need to compare programs fast.</strong> Most visit on mobile with limited time. Dense text blocks and no comparison structure meant they left without finding what they needed.</p>
+                <p><strong>Navigation did not support user goals.</strong> Labels such as "Sickle Cell Disease Advocacy" and "The Data" reflected organizational topics rather than common user tasks like finding programs, volunteering, or learning about impact.</p>
+                <p><strong>Key actions were broken or buried.</strong> Donate linked to PayPal. KAWP linked to an external site. Volunteer pages didn't exist. Users had no clear path to action.</p>
+                <p><strong>Content lacked clear hierarchy.</strong> Important information existed, but was spread across long pages and competing sections. Users had to work to determine what was most important and where to go next.</p>
+                <p><strong>Mobile-first was non-negotiable.</strong> The client confirmed most of their audience accesses the site by phone. Responsive design and mobile navigation weren't a nice-to-have — they were required.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         UNDERSTANDING OUR USERS
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Understanding Our Users</h2>
+
+            <div class="image-grid two-column">
+                <div>
+                    <img src="assets/persona1.png" alt="Persona: Angela Rodriguez, 38, single mother and healthcare assistant looking for after-school programs for her teenager">
+                    <p class="image-caption">Angela — parent persona. Browses on mobile, limited time, needs to evaluate programs quickly.</p>
+                </div>
+                <div>
+                    <img src="assets/persona2.png" alt="Persona: Jamal Thompson, 16, high school student interested in theatre and performing arts programs">
+                    <p class="image-caption">Jamal — student persona. High digital literacy, wants visuals and a clear path to join.</p>
+                </div>
+            </div>
+
+            <p>
+                Research identified three primary audience groups: parents and guardians, students and youth participants, and donors, volunteers, and community supporters. These personas helped guide navigation, content organization, and call-to-action placement throughout the redesign. Every decision was evaluated against the needs, goals, and constraints of real users.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         INFORMATION ARCHITECTURE
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Information Architecture</h2>
+
+            <h3>Before: Flat and Org-Focused</h3>
+            <img src="assets/original-sitemap.png" alt="Original sitemap — flat structure, everything under homepage, external links for donate and KAWP">
+            <p class="image-caption">Original structure: 7 flat pages, 2 critical actions going off-site, no program hierarchy.</p>
+
+            <h3>After: Goal-Oriented Hierarchy</h3>
+            <img src="assets/proposed-sitemap.png" alt="Proposed sitemap reorganizing content around user goals with 6 top-level sections and program subpages">
+            <p class="image-caption">Redesigned structure: 6 goal-oriented sections, dedicated program subpages, all key actions kept on-site.</p>
+
+            <p>
+                The core information architecture decision was to organize the site around user goals rather than internal organizational structure. Instead of asking users to interpret Maroon 9's terminology, the new structure helps them quickly find programs, events, impact stories, and ways to get involved.
+            </p>
+
+            <div class="ia-path">
+                <span>About</span>
+                <span>Programs</span>
+                <span>Events</span>
+                <span>Impact</span>
+                <span>Get Involved</span>
+                <span>Contact</span>
+            </div>
+
+            <p>
+                Each top-level section was designed around a specific user task. Programs received dedicated subpages that made it easier for families to compare options, while key actions like donating, volunteering, and partnerships were given clear pathways within the site rather than sending users to external platforms.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         WIREFRAMING
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Wireframing</h2>
+
+            <div class="image-grid three-column">
+                <div>
+                    <img src="assets/wireframe-home.png" alt="Desktop homepage wireframe showing content hierarchy with hero, supporters strip, and program sections">
+                    <p class="image-caption">Homepage wireframe — content hierarchy first, visual design second.</p>
+                </div>
+                <div>
+                    <img src="assets/wireframe-about.png" alt="About page wireframe showing three-section layout for Our Story, Mission, and Leadership">
+                    <p class="image-caption">About page wireframe — three focused subsections instead of one dense block.</p>
+                </div>
+                <div>
+                    <img src="assets/wireframe-ourstory.png" alt="Our Story wireframe showing image and text layout for readability">
+                    <p class="image-caption">Our Story wireframe — image + text layout for scannable readability.</p>
+                </div>
+            </div>
+
+            <p>
+                Before moving into visual design, we used wireframes to test content hierarchy, navigation structure, and page layouts. This stage helped us validate key decisions early, including breaking content into dedicated pages, introducing clearer calls-to-action, and prioritizing mobile usability from the start.
+            </p>
+
+            <div class="card-grid">
+                <div class="info-card">
+                    <h3>Content Organization</h3>
+                    <p>Organized content into clear sections that support scanning and faster information discovery.</p>
+                </div>
+                <div class="info-card">
+                    <h3>CTA Planning</h3>
+                    <p>Established consistent action pathways so users could take the next step from any page.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Reduced Overload</h3>
+                    <p>Reduced cognitive load by separating content into focused pages with clear purposes.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mobile-First Layout</h3>
+                    <p>Considered mobile navigation and responsive layouts early in the design process.</p>
+                </div>
+            </div>
+
+            <h3>Mobile Wireframes</h3>
+            <div class="image-grid three-column">
+                <div>
+                    <img src="assets/wireframe-mobile-home.png" alt="Mobile homepage wireframe">
+                    <p class="image-caption">Mobile homepage.</p>
+                </div>
+                <div>
+                    <img src="assets/wireframe-mobile-about.png" alt="Mobile About page wireframe">
+                    <p class="image-caption">Mobile About page.</p>
+                </div>
+                <div>
+                    <img src="assets/wireframe-mobile-ourstory.png" alt="Mobile Our Story wireframe">
+                    <p class="image-caption">Mobile Our Story page.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         DESIGNING THE PROGRAMS EXPERIENCE
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Designing the Programs Experience</h2>
+
+            <img src="assets/programs-page.png" alt="Final Programs overview page with visual program cards, comparison layout, and Program Goals section">
+            <p class="image-caption">Programs overview page — comparison-focused layout with visual cards and clear calls-to-action.</p>
+
+            <p>
+                The Programs section was my primary design focus. Research showed that many parents arrived without knowing which program best fit their child. The original site relied on dense text and offered no clear way to compare options. I redesigned the experience around one goal: helping users make a confident decision in under two minutes.
+            </p>
+
+            <h3>Guiding Users Toward Action</h3>
+            <p>To support users throughout the decision-making process, I designed a floating call-to-action that appears as users scroll through program information and disappears when they reach the primary CTA at the bottom of the page.</p>
+
+            <h3>Design Goals</h3>
+            <div class="card-grid">
+                <div class="info-card">
+                    <h3>Enable Comparison</h3>
+                    <p>Created a comparison-friendly layout that helps users quickly evaluate all three programs before exploring details.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Reduce Cognitive Load</h3>
+                    <p>Organized content into clear sections that guide users from understanding options to taking action.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Show the Value</h3>
+                    <p>Highlighted outcomes such as confidence, creativity, belonging, and life skills to communicate value beyond participation.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Clear Next Step</h3>
+                    <p>Integrated clear calls-to-action throughout the experience so users always knew what to do next.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         INTERACTION DESIGN
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section highlight-section">
+        <div class="container case-container">
+            <h2>Interaction Design</h2>
+
+            <img src="assets/kawp-floatingcta.png" alt="Floating call-to-action on the KAWP program page, showing the CTA appearing while scrolling through content">
+            <p class="image-caption">Floating CTA on the KAWP page — appears on scroll, hides when the primary CTA enters view.</p>
+
+            <p>
+                Beyond page layouts and content structure, I focused on interaction design: the behaviors that guide users, provide feedback, and reduce friction throughout the experience. Every interaction was designed to support a specific user need identified during research.
+            </p>
+
+            <div class="callout">
+                <h3>Interaction Design Decisions</h3>
+                <p>
+Research showed users often reached the middle of a page without a clear path forward. To keep key actions accessible throughout the experience, I designed a floating CTA that appears once users begin scrolling and remains available as they explore content.                </p>
+                <p style="margin-top:.75rem;">
+                   The CTA automatically hides when the page's primary call-to-action enters view, preventing redundant actions and reducing visual clutter.
+                </p>
+                <p style="margin-top:.75rem;">
+                   Additionally, a back-to-top button was included across the site and shared the same screen space as the floating CTA. To avoid overlap, I positioned the back-to-top button above the CTA and added a dismiss option that allows users to close the CTA when needed. This was particularly important on mobile, where screen space is limited. Once dismissed, the back-to-top button returns to its original position.
+                </p>
+                <p style="margin-top:.75rem;">
+When the mobile navigation menu opens, both elements are temporarily hidden to prevent competing actions on smaller screens. Once the menu closes, they automatically return.                </p>
+            </div>
+
+            <div class="card-grid" style="margin-top:1.75rem;">
+                <div class="info-card">
+                    <h3>Hover Feedback</h3>
+                    <p>CAdded hover states to navigation links, buttons, and cards so users could easily identify interactive elements before clicking.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Full-Card Interaction</h3>
+                    <p>Made program cards fully clickable instead of limiting interaction to a small button, reducing friction and improving discoverability.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mobile Navigation</h3>
+                    <p>Designed a responsive mobile navigation that keeps key pages accessible while reducing clutter on smaller screens.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Context-Aware UI</h3>
+                    <p>Designed floating interface elements that adapt to page position and navigation state, reducing visual clutter while keeping important actions accessible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PROGRAM DETAIL PAGES
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Program Detail Pages</h2>
+
+            <div class="image-grid three-column">
+                <div>
+                    <img src="assets/kawp-page.png" alt="Kids Acting With Purpose program detail page">
+                    <p class="image-caption">Kids Acting With Purpose.</p>
+                </div>
+                <div>
+                    <img src="assets/pagetostage-page.png" alt="Page to Stage program detail page">
+                    <p class="image-caption">Page to Stage.</p>
+                </div>
+                <div>
+                    <img src="assets/sicklecellstars-page.png" alt="Sickle Cell Stars program detail page">
+                    <p class="image-caption">Sickle Cell Stars.</p>
+                </div>
+            </div>
+
+            <p>
+                After selecting a program, users are taken to a dedicated detail page. Each page follows a consistent structure that includes a program overview, key offerings, participant outcomes, visual storytelling, and a clear call-to-action. While the layout remains consistent, the content is tailored to each program's goals and audience.
+            </p>
+            <p>
+               Maintaining a consistent structure across all three pages helps users compare programs more easily because key information appears in familiar locations. It also created a reusable design pattern that streamlined development and ensured consistency across the experience. Each page includes a customized floating CTA that aligns with the specific program being viewed.
+            </p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         USABILITY TESTING
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Usability Testing</h2>
+
+            <img src="assets/usability-testing.png" alt="Usability testing session notes from six participants">
+            <p class="image-caption">Six participants, six scenarios each — covering programs, donations, volunteering, events, contact, and impact.</p>
+
+            <p>
+                After developing the website, we conducted usability testing with six participants representing Maroon 9's primary audiences: parents and guardians, donors and supporters, and volunteers and community partners. Each participant completed six task-based scenarios while we observed behavior, documented issues, and prioritized findings by severity.
+            </p>
+
+            <h3>What We Found</h3>
+            <div class="insight-list">
+                <p><strong>Donate was hard to find.</strong> Multiple users scrolled past the nav or relied on the footer to locate the Donate page. It needed to be in primary navigation and surfaced earlier on content pages.</p>
+                <p><strong>Program cards did not appear interactive.</strong>Users viewed the cards but were not confident they were clickable until hovering. Stronger visual cues and full-card interaction were needed.</p>
+                <p><strong>Important actions were easy to miss.</strong> On the Volunteer and Programs pages, key calls-to-action appeared too far down the page, causing some users to miss them before leaving or changing direction.</p>
+                <p><strong>Some pages felt text-heavy.</strong> Events and Impact in particular required too much reading to locate key information. Users wanted to scan, not read.</p>
+                <p><strong>About vs. Impact caused confusion.</strong> Several users weren't sure which section to visit for mission information vs. impact data. The distinction wasn't clear from the labels alone.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         ITERATION & IMPROVEMENTS
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Iteration & Improvements</h2>
+
+            <p>
+                Every finding from usability testing went directly into a fix. We treated the test as a
+                diagnostic tool, not a final grade.
+            </p>
+
+            <table class="iteration-table">
+                <thead>
+                    <tr>
+                        <th>Usability Finding</th>
+                        <th>What We Changed</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Donate actions were difficult to find</td>
+                        <td>Added Donate to primary navigation; surfaced donation CTAs earlier on Impact and homepage — not just at the bottom</td>
+                    </tr>
+                    <tr>
+                        <td>Program cards didn't feel clickable</td>
+                        <td>Made entire cards clickable with a hover lift effect; not just the button inside — so clicking anywhere on the card works as expected</td>
+                    </tr>
+                    <tr>
+                        <td>Important CTAs were positioned too low</td>
+                        <td>Moved primary CTAs higher on Volunteer and Programs pages; added the floating CTA for persistent visibility throughout scrolling</td>
+                    </tr>
+                    <tr>
+                        <td>Content felt dense and required too much scrolling</td>
+                        <td>Improved section breaks, reduced paragraph length, and replaced text-heavy blocks with scannable cards and visual hierarchy</td>
+                    </tr>
+                    <tr>
+                        <td>Confusion between About and Impact sections</td>
+                        <td>Clarified purpose of each section through clearer page headers and simplified navigation labels</td>
+                    </tr>
+                    <tr>
+                        <td>Floating UI competed with mobile hamburger nav</td>
+                        <td>Hid floating interface elements when the mobile navigation menu is open to prevent competing actions on smaller screens.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         FINAL OUTCOME
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Final Outcome</h2>
+
+            <div class="image-grid three-column">
+                <div>
+                    <img src="assets/final-homepage.png" alt="Final redesigned homepage">
+                    <p class="image-caption">Final homepage.</p>
+                </div>
+                <div>
+                    <img src="assets/programs-page.png" alt="Final Programs overview page">
+                    <p class="image-caption">Final Programs page.</p>
+                </div>
+                <div>
+                    <img src="assets/final-about-page.png" alt="Final About page">
+                    <p class="image-caption">Final About page.</p>
+                </div>
+            </div>
+
+            <p>
+                The redesign delivered a goal-oriented, mobile-responsive website built entirely from scratch. The new structure introduced dedicated program pages, clearer information hierarchy, consistent interaction patterns, and visible pathways for key actions across the site.
+            </p>
+
+            <div class="outcome-grid">
+                <div class="info-card">
+                    <h3>Program Discovery</h3>
+                    <p>Three dedicated program pages let users compare options and navigate to detailed information — something the original site made impossible.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Engagement Pathways</h3>
+                    <p>Donate, volunteer, and contact pathways are visible throughout the site — not hidden in a footer or linked off-site.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mission Clarity</h3>
+                    <p>The sickle cell advocacy mission is clearly communicated throughout, with a dedicated Sickle Cell Stars program page built for the first time.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Mobile Experience</h3>
+                    <p>Fully responsive with coordinated mobile navigation and context-aware floating UI that never gets in the way.</p>
+                </div>
+            </div>
+
+            <p style="margin-top:1.5rem;">
+               The project is currently under review alongside a parallel redesign created by a second team. Maroon 9 leadership plans to combine selected elements from both solutions into the organization's future website, giving this work a potential path to implementation.
+            </p>
+
+            <div style="margin-top:1.75rem;">
+                <a href="YOUR_LIVE_URL_HERE" target="_blank" class="button">Explore the Redesign →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         REFLECTION
+    ═══════════════════════════════════════════════ -->
+    <section class="case-section">
+        <div class="container case-container">
+            <h2>Reflection</h2>
+
+            <p>
+                <strong>Leading a real client project</strong> Working with a real nonprofit client taught me how to balance organizational goals, team perspectives, technical constraints, and user needs at the same time. Unlike a classroom exercise, decisions had real stakeholders and real consequences, which pushed me to communicate more clearly and justify design choices with evidence.
+            </p>
+
+            <p>
+                <strong>Designing and building</strong> Because I was involved in both design and front-end development, I gained a deeper understanding of how interaction decisions translate into implementation. Building features like the floating CTA system and responsive navigation reinforced the importance of considering edge cases, user states, and technical feasibility early in the design process.
+            </p>
+
+            <p>
+                <strong>Small details create better experiences.</strong>Throughout this project, I learned that effective design is often the result of many small decisions working together. From navigation labels and content organization to CTA placement and interaction behavior, every detail influences how easily users can accomplish their goals. Moving forward, I want to continue creating experiences that balance user needs with stakeholder goals while paying close attention to the details that make an experience feel intuitive and trustworthy.
+            </p>
+
+            <p>
+                <strong>What I'd do differently:</strong> If I were to revisit the project, I would introduce usability testing earlier in the process. While testing the coded website revealed valuable issues, earlier testing during wireframing could have helped identify navigation and content-clarity problems before development began.
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <p>© 2026 Celeste Vazquez</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="assets/celeste-vazquez-resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="footer-contact">
+            <a href="mailto:celvazquezvazquez@gmail.com">celvazquezvazquez@gmail.com</a>
+            <a href="https://linkedin.com/in/celeste-vazquez" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top" onclick="smoothScrollTo(0)">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="12" y1="22" x2="12" y2="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <polyline points="4,9 12,1 20,9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<script>
+function smoothScrollTo(target, duration) {
+    duration = duration || 900;
+    var end = (typeof target === "number") ? target : document.getElementById(target).getBoundingClientRect().top + window.scrollY;
+    var start = window.scrollY;
+    var startTime = performance.now();
+    function step(now) {
+        var elapsed = now - startTime;
+        var progress = Math.min(elapsed / duration, 1);
+        var ease = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+        window.scrollTo(0, start + (end - start) * ease);
+        if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+}
+
+var btn = document.getElementById("backToTop");
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 600) {
+        btn.classList.add("back-to-top--visible");
+    } else {
+        btn.classList.remove("back-to-top--visible");
+    }
+});
+</script>
+
+</body>
+</html>

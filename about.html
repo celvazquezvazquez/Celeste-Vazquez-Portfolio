@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Celeste Vazquez</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="container">
+        <a href="index.html" class="logo">
+            <h1>Celeste Vazquez</h1>
+            <p>UX Designer</p>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="index.html#projects">Projects <span class="arrow">›</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="maroon9.html">Maroon 9 Website Redesign</a></li>
+                    <li><a href="beanstack.html">Beanstack Training Video</a></li>
+                    <li><a href="conchas.html">Cowboy Conchas Website</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="assets/celeste-vazquez-resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT HERO
+    ═══════════════════════════════════════ -->
+    <section class="about-hero">
+        <div class="container about-hero__content">
+
+            <div class="about-hero__text">
+                <p class="eyebrow-label">About Me</p>
+                <h1>Hi, I'm Celeste.</h1>
+                <p class="about-hero__intro">
+                   I'm a UX designer based in the Dallas–Fort Worth area with a background in communication, digital media, and front-end development. I enjoy creating experiences that help people find information, make informed decisions, and navigate with confidence.
+                </p>
+
+                <p class="about-hero__intro">Through research, information architecture, and front-end development, I strive to create solutions that are clear, intuitive, and meaningful for the people using them.</p>
+
+                <div class="about-hero__ctas">
+                    <a href="assets/celeste-vazquez-resume.pdf" target="_blank" class="button">Download Resume</a>
+                    <a href="index.html#projects" class="button-ghost">See My Work</a>
+                </div>
+            </div>
+
+            <div class="about-hero__photo">
+                <img src="assets/Celeste Outside Headshot.jpg" alt="Celeste Vazquez, UX Designer">
+            </div>
+
+        </div>
+
+        <div class="scroll-hint">
+            <button class="scroll-hint__arrow" onclick="smoothScrollTo('about-stats', 900)" aria-label="Scroll down">
+                <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="12" y1="0" x2="12" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <polyline points="4,15 12,23 20,15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <script>
+        function smoothScrollTo(id, duration) {
+            const target = document.getElementById(id);
+            const start = window.scrollY;
+            const end = target.getBoundingClientRect().top + start;
+            const startTime = performance.now();
+            function step(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const ease = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+                window.scrollTo(0, start + (end - start) * ease);
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+        </script>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         STATS
+    ═══════════════════════════════════════ -->
+    <section class="about-stats" id="about-stats">
+        <div class="container about-stats__grid">
+            <div class="stat-card stat-card--large">
+                <span class="stat-card__eyebrow">GPA</span>
+                <span class="stat-card__number">4.0</span>
+                <span class="stat-card__sub">Summa Cum Laude · Dean's List · President's List</span>
+            </div>
+            <div class="stat-card stat-card--large">
+                <span class="stat-card__eyebrow">Degree</span>
+                <span class="stat-card__number">B.A.</span>
+                <span class="stat-card__sub">Communication Technology · ADVT Minor · Digital Media Certificate</span>
+            </div>
+            <div class="stat-card stat-card--large stat-card--text">
+                <span class="stat-card__eyebrow">Featured Work</span>
+                <span class="stat-card__number">Maroon 9 Redesign</span>
+                <span class="stat-card__sub">Current Project</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         MY STORY
+    ═══════════════════════════════════════ -->
+    <section class="about-story">
+        <div class="container about-story__content">
+
+            <div class="about-story__block">
+                <h2>My background</h2>
+                <p>
+                    I graduated from the University of Texas at Arlington with a B.A. in
+                    Communication Technology, an Advertising minor, and a Digital Media
+                    Certificate. As a first-generation college graduate, I learned early
+                    on that opportunities are not always obvious. People need information
+                    that is easy to find, understand, and act on.
+                </p>
+                <p>
+                    That perspective is a big part of why I am drawn to UX. I have always
+                    been interested in how people find information, make decisions, and
+                    navigate systems. Whether it is a website, an app, or an everyday
+                    process, <strong>I enjoy identifying friction points and finding ways
+                    to make experiences clearer, more enjoyable, and easier to navigate.</strong>
+                </p>
+            </div>
+
+            <div class="about-story__block">
+                <h2>What I bring</h2>
+                <p><strong>Bilingual perspective.</strong> Being fluent in both English and Spanish has shaped how I think about communication, clarity, and accessibility.</p>
+                <p><strong>Cross-functional experience.</strong> Through leadership roles in my university's UX Design Club, my work as an AV Director, and real client projects, I have learned how to collaborate across different stakeholders and communicate ideas clearly.</p>
+                <p><strong>Real-world project experience.</strong> I have worked on projects for nonprofit, public sector, and small business clients. Most recently I served as Project Lead for Maroon 9's website redesign, guiding the project from research and information architecture through front-end development and usability testing.</p>
+                <p><strong>Global perspective.</strong> In 2025, I received the Benjamin A. Gilman International Scholarship and studied abroad in Japan. I was drawn to Japan specifically because of how intentionally its systems and spaces are designed for people to navigate with ease. Experiencing that firsthand, as someone new to the country and the culture, reinforced how much good design can make people feel supported rather than lost.</p>
+                <figure class="about-inline-photo">
+                    <img src="assets/japan-namecard.jpg" alt="Handmade name card with Celeste written in Japanese katakana, decorated with Mount Fuji and cherry blossoms">
+                    <figcaption>Name card made by Kamakura Women's University students for UT Arlington students, 2025.</figcaption>
+                </figure>
+            </div>
+
+            <div class="about-story__block">
+                <h2>What I'm looking for</h2>
+                <p>
+                    I am looking for opportunities where I can keep growing as a designer
+                    while contributing meaningful work from day one. I enjoy projects that
+                    balance user needs, business goals, and real-world constraints. I am
+                    drawn to teams that take usability seriously, not just as a checklist,
+                    but as the core of how they build.
+                </p>
+                <p>
+                    Long term, <strong>I hope to create experiences that help people learn,
+                    connect, and access opportunities more easily, especially people who
+                    have historically been left out of those spaces.</strong>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SKILLS
+    ═══════════════════════════════════════ -->
+    <section class="about-skills">
+        <div class="container">
+            <h2>Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skills-group">
+                    <h3>UX & Research</h3>
+                    <ul>
+                        <li>User Research</li>
+                        <li>Usability Testing</li>
+                        <li>Information Architecture</li>
+                        <li>Wireframing</li>
+                        <li>Interaction Design</li>
+                        <li>Personas & Scenarios</li>
+                    </ul>
+                </div>
+                <div class="skills-group">
+                    <h3>Design Tools</h3>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Premiere Pro</li>
+                        <li>Canva</li>
+                    </ul>
+                </div>
+                <div class="skills-group">
+                    <h3>Development</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                        <li>SEO Basics</li>
+                    </ul>
+                </div>
+                <div class="skills-group">
+                    <h3>Communication</h3>
+                    <ul>
+                        <li>English (Fluent)</li>
+                        <li>Spanish (Fluent)</li>
+                        <li>Content Strategy</li>
+                        <li>Digital Media</li>
+                        <li>Social Media & Analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════ -->
+    <section class="about-testimonials">
+        <div class="container">
+            <h2>What others say</h2>
+            <div class="testimonials-grid">
+
+                <div class="testimonial-card">
+                    <p class="testimonial-card__quote">
+                        "Add a testimonial from your professor, supervisor, or pastor here.
+                        Ask them to speak specifically about your work ethic, attention to
+                        detail, or leadership — one specific example is worth more than
+                        general praise."
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar"></div>
+                        <div>
+                            <strong>Name Here</strong>
+                            <span>Title, Organization · Year</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-card__quote">
+                        "Second testimonial placeholder. A quote from your church manager,
+                        a Maroon 9 teammate, or a professor who can speak to a specific
+                        project or quality of your work."
+                    </p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar"></div>
+                        <div>
+                            <strong>Name Here</strong>
+                            <span>Title, Organization · Year</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CTA
+    ═══════════════════════════════════════ -->
+    <section class="about-cta">
+        <div class="container about-cta__content">
+            <h2>Let's work together.</h2>
+            <p>I'm currently open to entry-level UX opportunities in the DFW area and beyond.</p>
+            <div class="about-cta__buttons">
+                <a href="mailto:celvazquezvazquez@gmail.com" class="button">Send Me an Email</a>
+                <a href="index.html#projects" class="button-ghost">See My Work</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <p>© 2026 Celeste Vazquez</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="assets/celeste-vazquez-resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="footer-contact">
+            <a href="mailto:celvazquezvazquez@gmail.com">celvazquezvazquez@gmail.com</a>
+            <a href="https://linkedin.com/in/celeste-vazquez" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
