@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celeste Vazquez | UX Designer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="container">
+        <a href="index.html" class="logo">
+            <h1>Celeste Vazquez</h1>
+            <p>UX Designer</p>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="index.html#projects">Projects <span class="arrow">›</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="maroon9.html">Maroon 9 Website Redesign</a></li>
+                    <li><a href="beanstack.html">Beanstack Training Video</a></li>
+                    <li><a href="conchas.html">Cowboy Conchas Website</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="assets/celeste-vazquez-resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-eyebrow">UX Designer · Dallas, TX</p>
+                <h2>Designing experiences that create value.</h2>
+                <p>
+                    I'm a UX designer with a background in Communication Technology,
+                    digital media, and front-end development. I care about the details
+                    that make digital experiences feel clear, useful, and human.
+                </p>
+                <div class="hero-ctas">
+                    <a href="index.html#projects" class="button">View My Work</a>
+                    <a href="about.html" class="button-ghost">About Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/headshotcleancopy 2.jpg" alt="Celeste Vazquez, UX Designer based in Dallas">
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <button class="scroll-hint__arrow" onclick="smoothScrollTo('projects', 900)" aria-label="Scroll to projects">
+                <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="12" y1="0" x2="12" y2="22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <polyline points="4,15 12,23 20,15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <script>
+        function smoothScrollTo(id, duration) {
+            const target = document.getElementById(id);
+            const start = window.scrollY;
+            const end = target.getBoundingClientRect().top + start;
+            const startTime = performance.now();
+            function step(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const ease = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+                window.scrollTo(0, start + (end - start) * ease);
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+        </script>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FEATURED PROJECTS
+    ═══════════════════════════════════════ -->
+    <section class="projects" id="projects">
+        <div class="container">
+
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Selected work from research through implementation.</p>
+            </div>
+
+            <!-- Featured card — full width -->
+            <a href="maroon9.html" class="project-card project-card--featured">
+                <div class="project-card__image">
+                    <img src="assets/maroon9card.png" alt="Maroon 9 Website Redesign — final homepage and programs page">
+                </div>
+                <div class="project-card__body">
+                    <p class="project-card__tag">UX Design · Front-End Development · Research</p>
+                    <h3>Maroon 9 Website Redesign</h3>
+                    <p>
+                        Led a 5-person team in redesigning a nonprofit website, conducting stakeholder research, building the information architecture, and coding the homepage, navigation, and full programs section in HTML, CSS, and JavaScript.
+                    </p>
+                    <span class="project-card__link">View Case Study →</span>
+                </div>
+            </a>
+
+            <!-- Secondary cards — all full width horizontal -->
+            <div class="projects-secondary">
+
+                <a href="beanstack.html" class="project-card project-card--featured">
+                    <div class="project-card__image">
+                        <img src="assets/beanstack-hero.png" alt="Beanstack Training Video for Arlington Public Library">
+                    </div>
+                    <div class="project-card__body">
+                        <p class="project-card__tag">UX Research ·
+Service Design
+·  Instructional Design</p>
+                        <h3>Beanstack Training Video</h3>
+                        <p>
+                            Researched why library patrons struggled to stay engaged with the Beanstack reading app, then designed a training solution focused on improving onboarding, confidence, and long-term participation.
+                        </p>
+                        <span class="project-card__link">View Case Study →</span>
+                    </div>
+                </a>
+
+                <a href="conchas.html" class="project-card project-card--featured">
+                    <div class="project-card__image">
+                        <img src="assets/conchas-hero.png" alt="Cowboy Conchas website homepage">
+                    </div>
+                    <div class="project-card__body">
+                        <p class="project-card__tag">Web Design · Front-End Development · SEO Strategy</p>
+                        <h3>Cowboy Conchas Website</h3>
+                        <p>
+                           Designed and developed a website concept for a local Arlington bakery, combining front-end development, audience research, competitor analysis, and SEO strategy to improve online discoverability.
+                        </p>
+                        <span class="project-card__link">View Case Study →</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT SNIPPET
+    ═══════════════════════════════════════ -->
+    <section class="about-snippet" id="about-preview">
+        <div class="container about-snippet__content">
+            <div class="about-snippet__text">
+                <p class="eyebrow-label">About Me</p>
+                <h2>Turning complexity into clarity.</h2>
+                <p>
+                  Why are some experiences easy to use while others 
+                  make people work harder than they need to?</p>
+
+                    <p>I've always been curious about what helps people find information, 
+                    make decisions, and accomplish their goals. Whether it's a website, 
+                    an app, or a process, I enjoy identifying friction points and finding ways 
+                    to make the experience clearer and more intuitive.</p>
+
+                    <p>Today, I create digital experiences that help people find what they need, make informed decisions, and accomplish their goals with confidence.<br>
+                                    </p>
+                <a href="about.html" class="button">Learn More About Me →</a>
+            </div>
+            <div class="about-snippet__stats">
+                <div class="stat-card">
+                    <span class="stat-card__eyebrow">GPA</span>
+                    <span class="stat-card__number">4.0</span>
+                    <span class="stat-card__label">Summa Cum Laude</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-card__eyebrow">Degree</span>
+                    <span class="stat-card__number">B.A.</span>
+                    <span class="stat-card__label">Communication Technology · ADVT Minor · Digital Media Certificate</span>
+                </div>
+                <div class="stat-card stat-card--text">
+                    <span class="stat-card__eyebrow">Featured Work</span>
+                    <span class="stat-card__number">Maroon 9 Redesign</span>
+                    <span class="stat-card__label">Current Project</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         RESUME
+    ═══════════════════════════════════════ -->
+    <section class="resume-teaser">
+        <div class="container resume-teaser__content">
+            <div>
+                <h2>Want the full picture?</h2>
+                <p>Download my resume for a complete look at my experience, education, and skills.</p>
+            </div>
+            <a href="assets/celeste-vazquez-resume.pdf" target="_blank" class="button">
+                Download Resume
+            </a>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
+    <section class="contact" id="contact">
+        <div class="container contact__content">
+            <p class="eyebrow-label">Let's Connect</p>
+            <h2>I'm currently open to entry-level UX opportunities.</h2>
+            <p>
+                Whether you have a role in mind, a project to discuss, or just want
+                to connect, my inbox is open.
+            </p>
+            <div class="contact__links">
+                <a href="mailto:celvazquezvazquez@gmail.com" class="button">
+                    Send Me an Email
+                </a>
+                <a href="https://linkedin.com/in/celeste-vazquez" target="_blank" class="button-ghost">
+                    Connect on LinkedIn
+                </a>
+            </div>
+            <p class="contact__email">celvazquezvazquez@gmail.com</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <p>© 2026 Celeste Vazquez</p>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="assets/celeste-vazquez-resume.pdf" target="_blank">Resume</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="footer-contact">
+            <a href="mailto:celvazquezvazquez@gmail.com">celvazquezvazquez@gmail.com</a>
+            <a href="https://linkedin.com/in/celeste-vazquez" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
