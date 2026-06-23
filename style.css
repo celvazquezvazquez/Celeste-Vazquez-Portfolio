@@ -1790,19 +1790,16 @@ footer {
     height: 1.5px;
     background: var(--text);
     border-radius: 2px;
-    transition: transform 0.25s var(--ease), opacity 0.2s var(--ease);
+    transition: transform 0.25s var(--ease), opacity 0.2s var(--ease), border-radius 0.1s;
     transform-origin: center;
 }
 
-.hamburger.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
-.hamburger.is-open span:nth-child(2) { opacity: 0; }
-.hamburger.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+/* Clean X — sharp ends, no dashes */
+.hamburger.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); border-radius: 0; }
+.hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); border-radius: 0; }
 
-/* Mobile nav lives OUTSIDE <header> so position:fixed works correctly
-   (backdrop-filter on header creates a new containing block for fixed children) */
-.mobile-nav {
-    display: none;
-}
+.mobile-nav { display: none; }
 
 body.nav-open .back-to-top {
     opacity: 0 !important;
@@ -1819,11 +1816,10 @@ body.nav-open .back-to-top {
     .hamburger { display: flex; }
     .nav-links { display: none !important; }
 
-    /* Nav panel: sibling of <header>, position:fixed relative to viewport */
     .mobile-nav {
-        display: block;
+        display: block !important;
         position: fixed;
-        top: 0; /* set by JS: header.offsetHeight */
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
@@ -1861,7 +1857,6 @@ body.nav-open .back-to-top {
         letter-spacing: -.01em;
     }
 
-    /* Projects row: link + chevron toggle */
     .mobile-nav__row {
         display: flex;
         align-items: center;
@@ -1898,7 +1893,6 @@ body.nav-open .back-to-top {
         color: var(--accent);
     }
 
-    /* Submenu (hidden by default, toggled by JS) */
     .mobile-nav__submenu {
         list-style: none;
         padding: 0.25rem 0 0.5rem 1rem;
@@ -1914,41 +1908,28 @@ body.nav-open .back-to-top {
         border-bottom: 1px solid var(--border);
     }
 
-    .mobile-nav__submenu li:last-child a {
-        border-bottom: none;
-    }
+    .mobile-nav__submenu li:last-child a { border-bottom: none; }
 
-    /* --- GLOBAL SPACING --- */
     section { padding: 3.5rem 0; }
     .hero { padding: 4rem 0 2.5rem; }
 
-    /* --- HOME HERO --- */
     .hero-content { grid-template-columns: 1fr; gap: 2rem; }
     .hero-image { order: -1; display: flex; justify-content: center; }
     .hero-image img { width: min(12rem, 55vw); }
     .hero-ctas { flex-direction: column; align-items: flex-start; }
 
-    /* --- PROJECT CARDS --- */
     .project-card--featured { grid-template-columns: 1fr; }
     .project-card--featured .project-card__image { min-height: 200px; max-height: 240px; }
     .project-card--featured .project-card__body { padding: 1.75rem; }
     .project-card--featured .project-card__body h3 { font-size: 1.5rem; }
 
-    /* --- ABOUT SNIPPET --- */
     .about-snippet__content { grid-template-columns: 1fr; gap: 2rem; }
     .about-snippet__stats { flex-direction: row; flex-wrap: wrap; }
-
-    /* --- RESUME TEASER --- */
     .resume-teaser__content { flex-direction: column; align-items: flex-start; }
-
-    /* --- CONTACT --- */
     .contact__links { flex-direction: column; }
-
-    /* --- FOOTER --- */
     .footer-content { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
     .footer-contact { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 
-    /* --- CASE STUDY --- */
     .case-hero { padding: 3rem 0 2.5rem; }
     .case-hero h1 { font-size: 2.2rem; }
     .project-meta { grid-template-columns: repeat(2, 1fr); }
@@ -1958,7 +1939,6 @@ body.nav-open .back-to-top {
     .image-grid.smaller-images,
     .image-grid.mobile-wireframes { grid-template-columns: 1fr; }
 
-    /* --- ABOUT PAGE --- */
     .about-hero { padding: 3.5rem 0 3rem; }
     .about-hero__content { grid-template-columns: 1fr; gap: 2rem; }
     .about-hero__photo { order: -1; display: flex; justify-content: center; }
