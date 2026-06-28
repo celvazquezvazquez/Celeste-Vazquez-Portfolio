@@ -803,7 +803,7 @@ footer {
 }
 
 .ia-path span:not(:last-child)::after {
-    content: 'â†’';
+    content: '→';
     margin-left: 0.5rem;
     opacity: 0.5;
 }
@@ -1955,4 +1955,25 @@ body.nav-open .back-to-top {
     .skills-grid { grid-template-columns: 1fr; }
     .stat-card--large .stat-card__number { font-size: 2.5rem; }
     .stat-card--large.stat-card--text .stat-card__number { font-size: 2rem; }
+}
+
+/* --- IA FLOW (maroon9 - replaces ia-path pills) --- */
+.ia-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.ia-flow span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.ia-flow__arrow {
+    color: var(--muted);
+    font-weight: 300;
 }
